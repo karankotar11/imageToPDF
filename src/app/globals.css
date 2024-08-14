@@ -16,18 +16,30 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body{
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.previews {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0;
+  &.horizontal {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+  }
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: minmax(240px, auto);
   }
 }
